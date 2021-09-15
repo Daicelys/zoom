@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title>JavaScript</title>
+	
+</head>
+<body>
+
+<!---Codigo para hacer un zoom (Ampliar y disminuir imagenes) --->
+
+	<!--Estilos css-->
+	<style>
+		.zoom_grande {
+		width: 800px;
+		height: auto;
+	    }
+
+		.zoom_peke{
+		width: 400px;
+		height: auto;
+		}
+	</style>
+	<!--Fin-->
+
+
+<!--Imagen con id para trabajar con js-->
+	<img id="thumb" class="thumb" src="img/1.jpg" width="400">
+<input class="boton" type="button" value="+" onclick="zoom_grande()">  <!--Esto llama a la funcion-->
+<input class="boton" type="button" value="-" onclick="zoom_peke()">    <!--Esto llama a la funcion-->
+
+
+<!-- Codigo JS-->
+<script> 
+function zoom_grande(){
+	var thumb = document.getElementById("thumb");   //Esto me permite acceder a la imagen que tiene como clase y id 'thumb' 
+	thumb.className = "zoom_grande";				//Esto me permite acceder a la imagen para que adopte las clases zoom_grande 
+}
+
+function zoom_peke(){
+	var thumb = document.getElementById("thumb");
+	thumb.className = "zoom_peke";
+}
+</script>
+
+<!--Fin-->
+
+</body>
+</html>
